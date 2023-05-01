@@ -25,3 +25,8 @@ async def demo_post(inp: Msg):
 @app.get("/path/{path_id}")
 async def demo_get_path_id(path_id: int):
     return {"message": f"This is /path/{path_id} endpoint, use post request to retrieve result"}
+
+
+@app.get("/path/{path_id}/{user_id}")
+async def demo_get_path_id_user_id(path_id: int, user_id: int):
+    return {"message": f"This is /path/{path_id}/{user_id} endpoint, use post request to retrieve result"}
